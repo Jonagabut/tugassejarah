@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peta Sederhana</title>
+    <!-- Masukkan API Key Google Maps Anda di bawah ini -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq_EmC57fIlVpiv8UjsAondzlU8EhRwr4"></script>
+    <script>
+        function initMap() {
+            // Koordinat tengah peta
+            var myLatLng = {lat: -6.2088, lng: 106.8456};
+
+            // Buat objek peta
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 13
+            });
+
+            // Buat marker di lokasi tertentu
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Lokasi Saya'
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Tempat peta akan ditampilkan -->
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <!-- Panggil fungsi initMap() saat halaman dimuat -->
+    <script>
+        initMap();
+    </script>
+</body>
+</html>
