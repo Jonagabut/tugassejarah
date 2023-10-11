@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Web Belanja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Situs Web Belanja</h1>
+    </header>
+    <main>
+        <section class="product">
+            <img src="product1.jpg" alt="Produk 1">
+            <h2>Produk 1</h2>
+            <p>Harga: $10</p>
+            <button onclick="addToCart('Produk 1', 10)">Tambah ke Keranjang</button>
+        </section>
+        <section class="product">
+            <img src="product2.jpg" alt="Produk 2">
+            <h2>Produk 2</h2>
+            <p>Harga: $15</p>
+            <button onclick="addToCart('Produk 2', 15)">Tambah ke Keranjang</button>
+        </section>
+    </main>
+    <aside>
+        <h2>Keranjang Belanja</h2>
+        <ul id="cart"></ul>
+        <p>Total: <span id="total">$0</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>
